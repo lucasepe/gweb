@@ -71,6 +71,10 @@ func (context Context2D) ClosePath() {
 	context.value.Call("closePath")
 }
 
+func (context Context2D) Ellipse(x, y, rx, ry float64, rot float64, sAngle, eAngle float64) {
+	context.value.Call("ellipse", x, y, rx, ry, rot, sAngle, eAngle, false)
+}
+
 func (context Context2D) Arc(x, y, r int, sAngle, eAngle float64) {
 	context.value.Call("arc", x, y, r, sAngle, eAngle, false)
 }
